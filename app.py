@@ -25,12 +25,12 @@ square_meters = st.number_input("Square Meters (Required)", min_value=20, max_va
 # Arrange inputs
 col1, col2 = st.columns(2)
 with col1:
-    num_rooms = st.slider("Number of Rooms", 1, 10, 3)
+    num_rooms = st.slider("Number of Rooms", 1, 100, 3)
     attic = st.slider("Attic Size (m²)", 0, 10000, 10)
     garage = st.slider("Garage Size (m²)", 0, 1000, 10)
 
 with col2:
-    floors = st.slider("Number of Floors", 1, 5, 1)
+    floors = st.slider("Number of Floors", 1, 100, 1)
     basement = st.slider("Basement Size (m²)", 0, 10000, 10)
     city_part_range = st.selectbox("City Part Range (1 = Low, 10 = High)", list(range(1, 11)), index=4)
 
@@ -40,8 +40,8 @@ bcol1, bcol2, bcol3, bcol4, bcol5 = st.columns(5)
 has_pool = bcol1.checkbox("Pool")
 has_yard = bcol2.checkbox("Yard")
 is_new = bcol3.checkbox("New")
-has_storage = bcol4.checkbox("Storage")
-has_storm_protector = bcol5.checkbox("Storm")
+has_storage = bcol4.checkbox("Storage Room")
+has_storm_protector = bcol5.checkbox("Storm Protector")
 
 # Input feature array
 features = np.array([[
