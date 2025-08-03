@@ -20,7 +20,7 @@ st.title("🏠 House Price Prediction App")
 st.markdown("Enter property details below to predict the price.")
 
 # Main input
-square_meters = st.number_input("Square Meters (Required)", min_value=20, max_value=500, value=100, step=1)
+square_meters = st.number_input("Square Meters (Required)", min_value=20, max_value=99999, value=100, step=1)
 
 # Arrange inputs
 col1, col2 = st.columns(2)
