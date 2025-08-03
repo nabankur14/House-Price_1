@@ -26,12 +26,12 @@ square_meters = st.number_input("Square Meters (Required)", min_value=20, max_va
 col1, col2 = st.columns(2)
 with col1:
     num_rooms = st.slider("Number of Rooms", 1, 10, 3)
-    attic = st.slider("Attic Size (m²)", 0, 100, 10)
-    garage = st.slider("Garage Size (m²)", 0, 100, 10)
+    attic = st.slider("Attic Size (m²)", 0, 10000, 10)
+    garage = st.slider("Garage Size (m²)", 0, 1000, 10)
 
 with col2:
     floors = st.slider("Number of Floors", 1, 5, 1)
-    basement = st.slider("Basement Size (m²)", 0, 100, 10)
+    basement = st.slider("Basement Size (m²)", 0, 10000, 10)
     city_part_range = st.selectbox("City Part Range (1 = Low, 10 = High)", list(range(1, 11)), index=4)
 
 # Binary features
