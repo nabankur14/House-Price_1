@@ -17,6 +17,8 @@ model = joblib.load('house_price_model_1.pkl')
 scaler = joblib.load('scaler_1.pkl')  # Ensure you saved your scaler during training
 
 st.title("🏠 House Price Prediction App")
+st.markdown("By Nabankur Ray")
+
 st.markdown("Enter property details below to predict the price.")
 
 # Main input
